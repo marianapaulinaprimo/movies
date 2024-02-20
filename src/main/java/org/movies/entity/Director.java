@@ -5,17 +5,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Title {
+public class Director {
+    private Integer id;
+    private String name;
+    private String surname;
 
-    private String title;
-
-    @OneToOne
+    @OneToMany
     private List<Movie> movies;
 }

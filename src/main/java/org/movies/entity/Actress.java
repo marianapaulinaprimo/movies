@@ -1,13 +1,13 @@
 package org.movies.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,6 +20,9 @@ public class Actress {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
-    private String nome;
+    private String name;
+    private String surname;
 
+    @OneToMany
+    private List<Movie> movies;
 }

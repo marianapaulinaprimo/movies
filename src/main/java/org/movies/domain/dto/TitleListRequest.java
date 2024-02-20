@@ -1,4 +1,4 @@
-package org.movies.dto;
+package org.movies.domain.dto;
 
 public class TitleListRequest {
 }
